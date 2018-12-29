@@ -38,15 +38,22 @@ app.get('/', ( request, response )=>{
   var template_data = {
     welcomemsg: "hello there",
     pagetitle: "home page"
-  }
+  };
   response.render('home.hbs', template_data);
 })
 
 app.get('/about', (request, response)=>{
   var template_data = {
     pagetitle: "about page"
-  }
+  };
   response.render('about.hbs', template_data);
+});
+
+app.get('/projects', (request,response) => {
+  var template_data = {
+    pagetitle: "projects page"
+  };
+  response.render('projects.hbs', template_data);
 });
 
 app.get('/bad', (request,response)=>{
